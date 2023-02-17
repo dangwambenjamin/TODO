@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>todo</title>
+</head>
+<body>
+    <div id="container">
+        <img id="banner" src="./images/bg-desktop-dark.jpg">
+        <div class="content">
+            <div class="header">
+                <h1>TODO</h1>
+                <img id="image" src="./images/icon-sun.svg">
+            </div>
+            <div class="inputbox">
+                <div class="inputcheck"></div>
+                <input id="text" placeholder="Create a new todo..." maxlength="65">   
+            </div>
+            <div class="items">
+                <div id="notes">  
+                    <!-- <div id="noteItem" draggable="true" ondragstart="drag(event)" ondrop="rearrange(event)">
+                        <div id="check" onclick="mark(event)"><img src="./images/icon-check.svg"></div>
+                        <p class="text">hello world</p>
+                        <div id="cross" onclick="destroy(event)"></div>
+                    </div> -->
+                </div>
+                <div class="nav">
+                    <div class="first">
+                        <li id="count">0 items left</li>
+                    </div>
+                    <div class="second">
+                        <ul>
+                            <li id="all" onclick="printall()">All</li>
+                            <li id="active" onclick="printactive()">Active</li>
+                            <li id="completed" onclick="printcompleted()">Completed</li>
+                        </ul>
+                    </div>
+                    <div class="third">
+                        <li id="clear" onclick="clearcompleted()">Clear Completed</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="drag">Drag and drop to reorder list</p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

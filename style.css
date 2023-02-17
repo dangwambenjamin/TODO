@@ -1,0 +1,339 @@
+:root{
+    --color: #222232;
+    --textcolor: #fff;
+    --backgroundColor: #333348;
+    --shadow: #222225;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--color);
+    border: 1px solid white;
+}
+#banner{
+    height:35%;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+}
+.content{
+    width: 45%;
+    height: 70%;
+    margin: auto;
+    padding: 0;
+    margin-top: 5%;
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 50px;
+}
+.header h1{
+    margin-top: 5px;
+    color: white;
+    letter-spacing: 15px;
+    font-size: 38px;
+    font-style: bold;
+    float: left;
+}
+.header img{
+    margin-top: 12px;
+    float: right;
+}
+.inputbox{
+    width: 100%;
+    margin-top: 38px;
+    margin-bottom: 20px;
+    background-color: var(--backgroundColor);
+    border-radius: 3px;
+    position: relative;
+}
+input{
+    width: calc(100% - 50px);  /*subtract circle space*/
+    height: 100%;
+    padding: 18px;
+    padding-left: 60px;
+    font-size: 19px;
+    background-color: transparent;
+    color: var(--textcolor);
+    border-style: none;
+    box-sizing: border-box;
+    caret-color: blue;
+    right: 0;
+}
+input:focus{
+    outline: none;
+}
+.items{
+    width: 100%;
+    height: calc(100% - 140px);
+    border-radius: 3px;
+    background: var(--backgroundColor);
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px 1px var(--shadow);
+    position: relative;
+}
+#notes{
+    width: 100%;
+    height: calc(100% - 54px);
+    overflow: auto;
+}
+.noteItem{
+    height: 57px;
+    width: 100%;
+    border-bottom: 1px solid #7e7a7a;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.check, .inputcheck{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #7e7a7a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.check img{
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    left: 25%;
+    transform: rotateY(-50%);
+    transform: rotateX(-50%);
+    pointer-events: none;
+}
+p.text{
+    position: absolute;
+    margin: 0;
+    font-size: 20px;
+    height: 25px;
+    color: var(--textcolor);
+    top: 50%;
+    left: 62px;
+    transform: translateY(-50%);
+    overflow: auto;
+}
+.cross{
+    width: 25px;
+    height: 25px;
+    background: url('./images/icon-cross.svg') center no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: block;
+}
+.nav{
+    position: relative;
+    display: inline-flex;
+    bottom: 0;
+    height: 54px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #7e7a7a;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.first{
+    width: 25%;
+    margin: auto;
+}
+.second{
+    width: 55%;
+    margin: auto;
+}
+.second ul{
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+}
+.third{
+    width: 25%;
+    margin: auto;
+}
+.nav li{
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #7e7a7a;
+}
+
+#image:hover{
+    cursor: pointer;
+}
+p:hover, .check:hover, .cross:hover{
+    cursor: pointer;
+}
+/* .cross:hover{
+    background: url('./images/icon-cross.svg') center no-repeat;
+} */
+#active:hover, #all:hover, #completed:hover, #clear:hover{
+    color: var(--textcolor);
+    cursor: pointer;
+}
+.drag{
+    position: relative;
+    top: 70px;
+    width: fit-content;
+    margin: auto;
+    color: #7e7a7a;
+}
+
+@media screen and (max-width:1400px) {
+    .content{
+        width: 45%;
+    }
+    #notes{
+        height: calc(100% - 50px);
+        padding-top: 0px;
+    }
+    .nav{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .content{
+        width: 60%;
+    }
+    #notes{
+        height: calc(100% - 50px);
+        padding-top: 0px;
+    }
+    .nav{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #container{
+        width: 100vw;
+    }
+    .content{
+        width: 80%;
+    }
+    #notes{
+        height: calc(100% - 45px);
+        padding-top: 0px;
+    }
+    .nav{
+        height: 45px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .content{
+        width: 90%;
+        height: 75%;
+    }
+    #banner{
+        height:30%;
+    }
+    .header h1{
+        margin-top: 20px;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+    .header img{
+        width: 25px;
+        height: 25px;
+        margin-top: 32px;
+    }
+    .inputbox{
+        margin-top: 38px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+    }
+    input{
+        width: calc(100% - 50px);  /*subtract circle space*/
+        padding: 15px;
+        padding-left: 50px;
+        font-size: 13px;
+    }
+    #notes{
+        height: calc(100% - 45px);
+        padding-top: 0px;
+    }
+    .noteItem{
+        height: 50px;
+    }
+    .check, .inputcheck{
+        width: 20px;
+        height: 20px;
+    }
+    p.text{
+        font-size: 15px;
+        left: 45px;
+        transform: translateY(-35%);
+    }
+    .cross{
+        width: 13px;
+        height: 13px;
+        display: block;
+    }
+    .nav{
+        height: 45px;
+    }
+    .first{
+        width: 50%;
+        margin: auto;
+    }
+    .third{
+        width: 50%;
+        margin: auto;
+    }
+    .third li{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+    .nav li{
+        display: inline-block;
+        margin: auto;
+        padding: 10px;
+        font-size: 11px;
+        font-weight: bold;
+        color: #7e7a7a;
+    }
+    .second{
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 60px;
+        border-radius: 3px;
+        background: var(--backgroundColor);
+        box-sizing: border-box;
+        box-shadow: 5px 5px 20px 1px var(--shadow);
+    }
+    .second ul{
+        position: inherit;
+        top: 20%;
+        right: 50%;
+        transform: translateY(-50%);
+        transform: translatex(50%);
+    }
+    .second ul li{
+        font-size: 13px;
+    }
+    .drag{
+        top: 110px;
+    }
+}
